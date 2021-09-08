@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:annotation-config/>
+
+	<bean id="dao1" class="com.lec.spring.beans.DAO">
+		<constructor-arg value="DAO_1"/>
+	</bean>
+<!-- 
+	<bean id="dao2" class="com.lec.spring.beans.DAO">
+		<constructor-arg value="DAO_2"/>
+	</bean>
+ -->
+ 
+<!--  	
+ 	<bean id="dao1" class="com.lec.spring.beans.DAOEx">
+ 		<constructor-arg value="DAO_EX"/>
+ 	</bean>
+ --> 	
+	<bean id="regService" class="com.lec.spring.beans.RegisterService">
+		<constructor-arg ref="dao1"/>
+	</bean>
+
+	<bean id="readService" class="com.lec.spring.beans.ReadService"/>
+	<bean id="updateService" class="com.lec.spring.beans.UpdateService"/>
+	<bean id="deleteService" class="com.lec.spring.beans.DeleteService"/>
+
+</beans>
+
+
+

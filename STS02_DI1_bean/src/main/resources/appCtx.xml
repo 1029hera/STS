@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- bean 객체 정의 -->
+	<!-- 
+	<bean id="messageBean" class="com.lec.spring.MessageKor"/>
+	 -->
+
+	<bean id="messageBean" class="com.lec.spring.MessageEng"/>
+	<!--
+		bean 객체 생성
+		com.lec.spring.MessageEng messageBean = new com.lec.spring.MessageKor();
+	-->
+
+</beans>

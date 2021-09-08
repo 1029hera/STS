@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="score2" class="com.lec.spring.Score"
+		c:kor="55" c:eng="66" c:math="23" c:comment="이것도 점수냐"/>
+	<!-- 
+		appCtx01_A 에도 
+		만약에 score1 id 를 갖는 상태에서 동시에 
+		A,B 설정파일로 컨텍스트를 만들면
+		중복되는 id 는 덮어쓰기 된다.  즉, 생성 순서 중요
+		
+		확인해보자
+	 -->
+	<bean id="score1" class="com.lec.spring.Score"
+		c:kor="4" c:eng="8" c:math="1" c:comment="꽝이요"/>
+
+</beans>
